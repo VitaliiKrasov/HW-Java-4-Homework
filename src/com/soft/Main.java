@@ -8,6 +8,8 @@ package com.soft;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println();
+        HTTPError error = new HTTPError(400);
+
+        System.out.println(error.name());
     }
 }

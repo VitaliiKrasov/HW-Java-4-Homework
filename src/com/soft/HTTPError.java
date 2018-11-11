@@ -1,5 +1,7 @@
 package com.soft;
 
+import java.time.DateTimeException;
+
 public enum HTTPError {
     BAD_REQUEST (400),
     UNAUTHORIZED (401),
@@ -34,13 +36,24 @@ public enum HTTPError {
     INTERNAL_SERVER_ERROR (500),
     NOT_IMPLEMENTED (501),
     BAD_GATEWAY (502),
-    503 SERVICE_UNAVAILABLE (),
-    504 GATEWAY_TIMEOUT (),
-    505 HTTP_VERSION_NOT_SUPPORTED (),
+    SERVICE_UNAVAILABLE (503),
+    GATEWAY_TIMEOUT (504),
+    HTTP_VERSION_NOT_SUPPORTED (505),
     VARIANT_ALSO_NEGOTIATES (506),
     INSUFFICIENT_STORAGE (507),
     LOOP_DETECTED (508),
     NOT_EXTENDED (510),
     NETWORK_AUTHENTICATION_REQUIRED (511),
     NETWORK_CONNECT_TIMEOUT_ERROR (599);
+
+    final int code;
+
+    HTTPError(int code) {
+        this.code = code;
+    }
+
+    public static HTTPError of(int code) {
+        return HTTPError(int code);
+    }
+
 }
