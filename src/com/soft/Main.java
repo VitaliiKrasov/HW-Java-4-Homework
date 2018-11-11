@@ -6,10 +6,12 @@
  */
 package com.soft;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        HTTPError error = new HTTPError(400);
-
-        System.out.println(error.name());
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number of HTTP Error:");
+        System.out.println(HTTPError.of(scanner.nextInt()));
     }
 }
