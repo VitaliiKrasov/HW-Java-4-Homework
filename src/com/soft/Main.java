@@ -8,6 +8,13 @@ package com.soft;
 
 public class Main {
     public static void main(String[] args) {
+        for (int i = 0; i < 3; i++) {
+            if(Range.belongTo(Reader.readFloat())) {
+                continue;
+            } else break;
+        }
+        System.out.println(Range.checkAll());
+
         System.out.println(HTTPError.of(Reader.readHTTPError()));
     }
 }
