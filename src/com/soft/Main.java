@@ -11,10 +11,11 @@ public class Main {
         Reader reader = new Reader();
 
         System.out.println("Enter three float numbers:");
+        Range range = new Range(-5, 5);
         for (int i = 0; i < 3; i++) {
-            Range.belongTo(reader.readFloat());
+            range.belongTo(reader.readFloat());
         }
-        System.out.println(Range.checkAll());
+        System.out.println(range.checkAll());
 
         System.out.println("\nEnter three integers:");
         FinderBounds finderBounds = new FinderBounds();
