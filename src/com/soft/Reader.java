@@ -11,12 +11,11 @@ public class Reader {
     }
 
     static int readInt() {
-        System.out.println("Ebter integer number:");
+        System.out.println("Enter three integers, use spaces to separate:");
         return scanner.nextInt();
     }
 
     static float readFloat() {
-        System.out.println("Enter float number:");
         return scanner.nextFloat();
     }
 }

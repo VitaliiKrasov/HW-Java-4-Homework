@@ -8,12 +8,17 @@ package com.soft;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Enter three float numbers:");
         for (int i = 0; i < 3; i++) {
-            if(Range.belongTo(Reader.readFloat())) {
-                continue;
-            } else break;
+            Range.belongTo(Reader.readFloat());
         }
         System.out.println(Range.checkAll());
+//
+//        for (int i = 0; i < 3; i++) {
+//            FinderBounds.checkInt(Reader.readInt());
+//        }
+//
+//        System.out.println(String.format("min = %1$s max = %2$s", FinderBounds.getMin(), FinderBounds.getMax()));
 
         System.out.println(HTTPError.of(Reader.readHTTPError()));
     }
