@@ -1,6 +1,6 @@
 package com.soft;
 
-public class FinderBounds {
+public class BoundaryFinder {
     String find(Reader reader){
         int min = reader.readInt();
         int max = min;
