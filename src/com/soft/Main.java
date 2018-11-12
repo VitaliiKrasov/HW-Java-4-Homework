@@ -18,8 +18,7 @@ public class Main {
         System.out.println(range.checkAll());
 
         System.out.println("\nEnter three integers:");
-        FinderBounds finderBounds = new FinderBounds();
-        System.out.println(finderBounds.find(reader));
+        System.out.println(BoundaryFinder.find(reader));
 
         System.out.println("\nEnter number of HTTP Error:");
         System.out.println(HTTPError.of(reader.readHTTPError()));

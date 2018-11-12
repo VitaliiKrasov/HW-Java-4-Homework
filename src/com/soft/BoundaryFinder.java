@@ -1,7 +1,7 @@
 package com.soft;
 
 public class BoundaryFinder {
-    String find(Reader reader){
+    static String find(Reader reader){
         int min = reader.readInt();
         int max = min;
         for(int i = 1; i < 3; i++) {
