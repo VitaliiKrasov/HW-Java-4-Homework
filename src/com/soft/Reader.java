@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Reader {
     Scanner scanner = new Scanner(System.in);
 
-    int readHTTPError() {
+    int readHTTPErrorCode() {
         return scanner.nextInt();
     }
 

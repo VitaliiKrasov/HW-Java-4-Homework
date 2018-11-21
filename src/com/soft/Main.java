@@ -21,6 +21,7 @@ public class Main {
         System.out.println(BoundaryFinder.find(reader));
 
         System.out.println("\nEnter number of HTTP Error:");
-        System.out.println(HTTPError.of(reader.readHTTPError()));
+        String httperror = "HTTPError" + reader.readHTTPErrorCode();
+        System.out.println(HTTPError.valueOf(httperror).getStatus());
     }
 }
